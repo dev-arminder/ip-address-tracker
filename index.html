@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin="true"
+    />
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <h1 class="main-heading">
+        IP Address Tracker
+      </h1>
+      <div class="inputs">
+        <input
+          type="text"
+          placeholder="Search for any IP address or domain"
+          id="ip-address"
+          class="error"
+        />
+        <button class="input-btn" id="search-btn">
+          <img src="./images/icon-arrow.svg" alt="right arrow" />
+        </button>
+      </div>
+      <div class="results"></div>
+    </header>
+    <!-- <section class="body-section close"> -->
+    <div class="data-response__row close">
+      <div class="data-response__body">
+        <h5 class="title">IP Address</h5>
+        <h3 class="title-response ip"></h3>
+      </div>
+
+      <div class="data-response__body">
+        <h5 class="title">Location</h5>
+        <h3 class="title-response location "></h3>
+      </div>
+
+      <div class="data-response__body">
+        <h5 class="title">Timezone</h5>
+        <h3 class="title-response timezone"></h3>
+      </div>
+
+      <div class="data-response__body">
+        <h5 class="title">ISP</h5>
+        <h3 class="title-response isp"></h3>
+      </div>
+    </div>
+
+    <div class="invalid-response close" id="error">
+      <h3 class="invalid-ip">Invalid IPv4 or IPv6 address.</h3>
+    </div>
+
+    <!-- add offset value dynamically using the API -->
+    <div id="mapid" class="close"></div>
+    <!-- </section> -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin="true"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

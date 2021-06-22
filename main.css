@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Resulable classes */
+
+/* Main header styling */
+.main-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em 3em;
+  background-image: url("./images/pattern-bg.png");
+  background-size: cover;
+}
+
+.main-heading {
+  font-size: 2rem;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 0.3em 0.5em 0.5em;
+}
+.inputs {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4em;
+  width: 100%;
+}
+.inputs > input {
+  font-size: 0.9rem;
+  padding: 0.7em;
+  width: 80%;
+  border-radius: 10px;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+}
+
+/* .inputs > input.error {
+  border: 2px solid #e71d1d;
+} */
+
+.inputs > input:focus,
+.inputs > input.active,
+.input-btn:focus,
+.input-btn:active {
+  outline: none;
+}
+.input-btn {
+  border: 0;
+  background: #000000;
+  padding: 0.8em 1.6em;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+}
+
+.body-section {
+  position: relative;
+  /* height: 500px;
+  background: coral; */
+}
+.data-response__row.close,
+.invalid-response.close,
+.close {
+  display: none;
+}
+.data-response__row,
+.invalid-response {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 95%;
+  padding: 1.1em;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 5px hsl(0, 0%, 59%);
+  border-radius: 20px;
+  margin: auto;
+  margin-top: -53px;
+}
+.invalid-ip {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: hsl(0, 0%, 17%);
+}
+.data-response__body {
+  margin-bottom: 0.8em;
+}
+
+.title {
+  color: hsl(0, 0%, 59%);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+.title-response {
+  color: hsl(0, 0%, 17%);
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+#mapid {
+  width: 100%;
+  max-width: 900px;
+  min-height: 500px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 5px hsl(0, 0%, 59%);
+}
+@media screen and (min-width: 430px) {
+  .main-heading {
+    font-size: 2.5rem;
+  }
+  .inputs > input {
+    width: 50%;
+    max-width: 500px;
+    font-size: 1.1rem;
+  }
+
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5em;
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .data-response__row {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 900px;
+    padding: 3em;
+  }
+  .data-response__body {
+    padding: 1em;
+  }
+  .invalid-ip {
+    font-size: 1.8rem;
+  }
+}
